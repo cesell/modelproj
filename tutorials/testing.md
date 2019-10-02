@@ -62,3 +62,24 @@ def cur():
     cursor.close()
     conn.close()
 ```
+
+Note that if an exception happens during the setup code (before the yield keyword), the teardown code (after the yield) will not be called.
+
+An alternative option for executing teardown code is to make use of the addfinalizer method of the request-context object to register finalization functions.
+
+```
+@pytest.fixture(scope="module")
+def smtp_connection(request):
+    smtp_connection = smtplib.SMTP("smtp.gmail.com", 587, timeout=5)
+
+    def fin():
+        print("teardown smtp_connection")
+        smtp_connection.close()
+
+    request.addfinalizer(fin)
+    return smtp_connection  # provide the fixture value
+```
+
+## Test Doubles
+
+In automated testing it is common to use objects that look and behave like their production equivalents, but are actually simplified. This reduces complexity, allows to verify code independently from the rest of the system and sometimes it is even necessary to execute self validating tests at all. A Test Double is a generic term used for these objects.
