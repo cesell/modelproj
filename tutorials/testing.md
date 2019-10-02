@@ -82,4 +82,4 @@ def smtp_connection(request):
 
 ## Test Doubles
 
-In automated testing it is common to use objects that look and behave like their production equivalents, but are actually simplified. This reduces complexity, allows to verify code independently from the rest of the system and sometimes it is even necessary to execute self validating tests at all. A Test Double is a generic term used for these objects.
+In automated testing it is common to use objects that **look and behave like their production equivalents**, but are actually simplified. This reduces complexity, allows to verify code independently from the rest of the system and sometimes it is even necessary to execute self validating tests at all. A Test Double is a generic term used for these objects.
