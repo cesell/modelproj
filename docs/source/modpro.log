@@ -1,0 +1,2 @@
+2019-10-01 12:58:44,322 : INFO : root : Log Started
+2019-10-01 12:58:44,517 : DEBUG : urllib3.connectionpool : Starting new HTTPS connection (1): drive.google.com:443
