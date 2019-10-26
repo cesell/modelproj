@@ -36,7 +36,7 @@ Create the repository in GITHUB first (safer)
 
 `$ git add _filename_`
 
-`$ git add .`
+`$ git add .`  Add all files with changes
 
 ## COMMIT changes
 
