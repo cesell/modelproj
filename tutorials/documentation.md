@@ -10,6 +10,7 @@ Becomes the \_\_doc\_\_ attribute
 
 ```
 $ pip install sphinx
+$ pip install recommonmark //for markup use
 ```
 
 Allow [markdown](https://www.sphinx-doc.org/en/master/usage/markdown.html) support
