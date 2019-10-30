@@ -14,6 +14,8 @@ logging.basicConfig(filename='modpro.log', filemode='w',
 logging.info('Log Started')
 ```
 
+NOTE: The module has to be imported from the "main file" so the \__init\__.py gets executed.
+
 And in each module create a logger that inherits from it. You can share root but it is not recommended. (check)
 
 `logger = logging.getLogger(__name__)`
